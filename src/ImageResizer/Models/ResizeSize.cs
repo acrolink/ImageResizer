@@ -60,7 +60,7 @@ namespace ImageResizer.Models
         public double GetPixelHeight(int originalHeight, double dpi)
             => ConvertToPixels(Height, Unit, originalHeight, dpi);
 
-        string ReplaceTokens(string text)
+        static string ReplaceTokens(string text)
             => (text != null && _tokens.TryGetValue(text, out var result))
                 ? result
                 : text;
